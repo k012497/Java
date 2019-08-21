@@ -23,46 +23,13 @@ public class Date {
 	
 	
 	public void print2() {
-		switch (this.month) {
-		case 1:
-			System.out.print("Jan");
-			break;
-		case 2:
-			System.out.print("Feb");
-			break;
-		case 3:
-			System.out.print("Mar");
-			break;
-		case 4:
-			System.out.print("Apr");
-			break;
-		case 5:
-			System.out.print("May");
-			break;
-		case 6:
-			System.out.print("Jun");
-			break;
-		case 7:
-			System.out.print("Jul");
-			break;
-		case 8:
-			System.out.print("Aug");
-			break;
-		case 9:
-			System.out.print("Sep");
-			break;
-		case 10:
-			System.out.print("Oct");
-			break;
-		case 11:
-			System.out.print("Nov");
-			break;
-		case 12:
-			System.out.print("Dec");
-			break;
-
-		default:
-			break;
+		String[] month = {"Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec" };
+		//System.out.print(month[3]);
+		for (int i = 0; i < month.length; i++) {
+			if (this.month == i) {
+				System.out.print(month[i-1]);
+				break;
+			}
 		}
 		System.out.println( " " + this.day + ", " + this.year);
 	}

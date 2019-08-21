@@ -7,7 +7,5 @@ public class DateTest {
 		
 		today.print1();
 		today.print2();
-
 	}
-
 }
