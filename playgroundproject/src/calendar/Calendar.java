@@ -19,16 +19,26 @@ public class Calendar {
 		return MAX_DAYS[month - 1];
 	}
 	
-	public void printCalender(int year, int month) {
+	public void printCalender(int year, int month, int dayValue) {
 
 		System.out.printf("              << %4d년  %3d월 >>  \n", year, month);
 		System.out.println("\tS     M     T     W     T     F     S    ");
 		System.out.println("===============================");
 		
+		// 시작 요일 설정  
+		for (int i =dayValue ; i > 0; i--) {
+			System.out.print("\t");
+		} 
+		
+		// 끝나는 일 설정 
 		int maxDay = getMaxDaysOfMonth(year, month);
 		
-		for (int i = 1; i <= maxDay; i++) {
-			System.out.printf("\t%d", i);
+		int startNum = dayValue+1;
+		int endNum = maxDay + dayValue+1;
+		int j = 1;
+		for (int i = startNum; i < endNum; i++) {
+			System.out.printf("\t%d", j);
+			j++;
 			if(i % 7 == 0) { //7개마다 개행 
 				System.out.println();	
 			}
