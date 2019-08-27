@@ -7,7 +7,7 @@ public class SingleTonTest {
 		
 		SingleTon single = SingleTon.getSingleTon();
 		single.print();
-		//single.setString("완료 못 함 ");
+		single.setString("완료 못 함 ");
 		single.print();
 		
 		SingleTon single2 = SingleTon.getSingleTon();
