@@ -4,10 +4,12 @@ public class Graduate extends Student{
 	private String type;
 	private double scholarshipRate;
 	
-	public Graduate(String name, String major, int year, double gpa, String type, double scholarshipRate) {
+	public Graduate(String name, String major, int year, double gpa, String type, double sholarshipRate) {
 		super(name, major, year, gpa);
-		this.type = type;
-		this.scholarshipRate = scholarshipRate;
+		if(type == "교육조교" || type =="연구조교") this.type = type;
+		else System.out.println("잘못된 입력");
+		if(sholarshipRate >= 0.0 && sholarshipRate <= 1.0) this.scholarshipRate = scholarshipRate;
+		else System.out.println("잘못된 입력 ");
 	}
 
 	public String getType() {
@@ -22,7 +24,7 @@ public class Graduate extends Student{
 	}
 	public void setScholarshipRate( double sholarshipRate) {
 		if(sholarshipRate >= 0.0 && sholarshipRate <= 1.0) this.scholarshipRate = scholarshipRate;
-		else System.out.println("잘못된 입");
+		else System.out.println("잘못된 입력 ");
 	}
 	
 	@Override
