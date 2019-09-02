@@ -1,4 +1,4 @@
-package chapter09.auto_car;
+package chapter09.operate_vehicle;
 
 public class TestMain {
 
@@ -10,7 +10,5 @@ public class TestMain {
 			operate[i].setSpeed(100);
 			operate[i].turn(40);
 		}
-
 	}
-
 }

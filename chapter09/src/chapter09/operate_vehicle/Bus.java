@@ -1,4 +1,4 @@
-package chapter09.auto_car;
+package chapter09.operate_vehicle;
 
 public class Bus implements Operate{
 	public void start() {

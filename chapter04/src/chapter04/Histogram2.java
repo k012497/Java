@@ -1,23 +1,25 @@
 package chapter04;
 
 public class Histogram2 {
-	public static final int COUNT = 10;
+	public static final int SIZE = 10;
 
 	public static void main(String[] args) {
-		int[] countArr = new int[COUNT]; //객체 만들면 값 안 줘도 디폴트값이 들어간다. 
-		int  randomNum  = 0;
-		
-		for (int i = 0; i < COUNT; i++) {
-			randomNum = (int)(Math.random()*(100-1+1)+1);
-			if(randomNum%10 == 0) {
-				countArr[(randomNum/10)-1]++;
-			}else {
-				countArr[(randomNum/10)]++;
+		int[] countArr = new int[SIZE]; // 객체 만들면 값 안 줘도 디폴트값이 들어간다.
+		int randomNum = 0;
+
+		for (int i = 0; i < SIZE; i++) {
+			randomNum = (int) (Math.random() * (100 - 1 + 1) + 1);
+			countArr[(randomNum - 1) / 10]++;
+		}
+
+			// countArr에 누적된 만큼 출력
+		for (int j = 0; j < countArr.length; j++) {
+			System.out.print((( 10 * j ) + 1) + " - " + (10 * ( j + 1 )) + " : " );
+			for (int k = 0; k < countArr[j]; k++) {
+				System.out.print("*");
 			}
-			
-		for (int j = 0; j < COUNT; j++) {
-				System.out.printf("%d~%d = ");
+			System.out.println("");
 		}
-		}
+
 	}
 }
