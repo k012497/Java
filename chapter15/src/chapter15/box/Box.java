@@ -30,11 +30,17 @@ public class Box<T,U> {
 		return a[a.length-1];
 	}
 	
-	public static void swap(Object[] obj, int i, int j) {
-		Object temp = null;
+	public static <T> void swap(T[] obj, int i, int j) {
+		T temp = null;
 		temp = obj[i];
 		obj[i] = obj[j];
 		obj[j] = temp;
+	}
+	
+	public static void printArray(Object[] obj) {
+		for (Object object : obj) {
+			System.out.println(object + " ");
+		}
 	}
 	
 }
