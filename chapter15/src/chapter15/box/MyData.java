@@ -7,6 +7,11 @@ public class MyData {
 		super();
 		this.str = str;
 	}
+
+	@Override
+	public String toString() {
+		return "MyData [str=" + str + "]";
+	}
 	
 	
 }
