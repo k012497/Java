@@ -4,6 +4,7 @@ public class BoxTest {
 
 	public static void main(String[] args) throws Exception{
 		Box<String, Integer> b1 = new Box<String, Integer>("SOJIN", 30);
+
 		String strName = b1.getData1(); //하향 형변환 필요 없다 
 		Integer num = b1.getData2();
 //		System.out.println(strName);

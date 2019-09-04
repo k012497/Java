@@ -26,6 +26,7 @@ public class Box<T,U> {
 		this.data2 = data2;
 	}
 
+
 	public static <T> T getLast(T[] a) {
 		return a[a.length-1];
 	}
@@ -42,5 +43,4 @@ public class Box<T,U> {
 			System.out.println(object + " ");
 		}
 	}
-	
 }
