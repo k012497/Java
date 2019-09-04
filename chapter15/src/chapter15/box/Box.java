@@ -29,4 +29,12 @@ public class Box<T,U> {
 	public static <T> T getLast(T[] a) {
 		return a[a.length-1];
 	}
+	
+	public static void swap(Object[] obj, int i, int j) {
+		Object temp = null;
+		temp = obj[i];
+		obj[i] = obj[j];
+		obj[j] = temp;
+	}
+	
 }
