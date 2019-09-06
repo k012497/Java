@@ -1,6 +1,6 @@
 package chapter15.comparable;
 
-public class MyClass<T extends MyClass> implements Comparable<T> {
+public class MyClass<T> implements Comparable<T> {
 	public int num;
 	private String name;
 
