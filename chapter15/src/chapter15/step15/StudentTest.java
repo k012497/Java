@@ -11,7 +11,6 @@ public class StudentTest {
 		ArrayList<Student> std = new ArrayList<Student>();
 		int index = 0;
 		String name = null;
-		
 		std.add(new Student("kim", "D", "D"));
 		std.add(new Student("kim", "Seoul", "010-0000-0000"));
 		std.add(new Student("lim", "Busan", "010-1234-1234"));
@@ -59,9 +58,9 @@ public class StudentTest {
 		
 		if(menuNum == 1 || menuNum == 3) {
 			System.out.println("> > > > > > a f t e r > > > > > >");
-			Iterator iter2 = std.iterator();
+			Iterator<Student> iter2 = std.iterator();
 			while(iter2.hasNext()) {
-				Object obj = iter2.next();
+				Student obj = iter2.next();
 				System.out.println(obj);
 			}
 		}
