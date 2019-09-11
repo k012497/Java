@@ -5,9 +5,9 @@ import java.util.ArrayList;
 public class RandomList<T> {
 	ArrayList<T> list;
 
-	public RandomList(ArrayList<T> list) {
+	public RandomList() {
 		super();
-		this.list = list;
+		this.list = new ArrayList<>();;
 	}
 
 	public void add(T item) {

@@ -6,8 +6,7 @@ import java.util.List;
 public class RandomListTest {
 
 	public static void main(String[] args) {
-		ArrayList<Integer> list = new ArrayList<>();
-		RandomList r = new RandomList(list);
+		RandomList r = new RandomList();
 		
 		r.add(1);
 		r.add(10);
@@ -16,8 +15,6 @@ public class RandomListTest {
 		System.out.println(r.select());
 		System.out.println(r.select());
 		System.out.println(r.select());
-		
 
 	}
-
 }
