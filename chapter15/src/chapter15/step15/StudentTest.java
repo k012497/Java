@@ -16,12 +16,14 @@ public class StudentTest {
 		std.add(new Student("lim", "Busan", "010-1234-1234"));
 		std.add(new Student("jim", "Seoul", "010-1111-2222"));
 		std.add(new Student("bim", "Seoul", "010-3333-4444"));
-
+		
 		Iterator iter = std.iterator();
 		while(iter.hasNext()) {
 			Object obj = iter.next();
 			System.out.println(obj);
 		}
+		
+		//System.out.println(std.get(1).compareTo(2));
 		
 		System.out.println("=====SYSTEM MENU=====");
 		System.out.println("1 add information");
@@ -64,6 +66,9 @@ public class StudentTest {
 				System.out.println(obj);
 			}
 		}
+		
+		
+		
 				
 	}
 

@@ -1,6 +1,6 @@
 package chapter15.step15;
 
-public class Student {
+public class Student implements Comparable{
 	private String name;
 	private String address;
 	private String telephone;
@@ -35,6 +35,16 @@ public class Student {
 	@Override
 	public String toString() {
 		return "Student [name=" + name + ", address=" + address + ", telephone=" + telephone + "]";
+	}
+
+	@Override
+	public int compareTo(Object o) {
+		Student obj = null;
+		if(o instanceof Student) {
+			obj = (Student) o;
+		}
+		
+		return telephone.compareTo(obj.telephone);
 	}
 	
 	
