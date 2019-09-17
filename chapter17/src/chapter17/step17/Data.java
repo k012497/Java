@@ -45,12 +45,17 @@ public class Data implements Serializable{
 		
 		Iterator iter = readList.iterator();
 		Data person = null;
+		Boolean find = false;
 		while(iter.hasNext()) {
 			person = (Data) iter.next();
-			if(person.number == numToFind)
-				System.out.print(person.phoneNum);
-			else
-				System.out.println("찾을 수 없습니다. ");
+			if(person.number == numToFind) {
+				System.out.println(person.name + "'s Phone Number : " + person.phoneNum);
+				find = true;
+			} 
+		}
+		
+		if(!find){
+			System.out.println("찾을 수 없습니다. ");
 		}
 		
 		if(ois != null) ois.close();	
