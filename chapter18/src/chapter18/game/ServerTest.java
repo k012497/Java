@@ -17,11 +17,13 @@ public class ServerTest {
 		while(true) {
 			Game game = new Game();
 			
-			Socket socket1;
-				socket1 = ss.accept();
+			Socket socket1 = ss.accept();
 			Player player1 = new Player(game, socket1, 'X');
 			Socket socket2 = ss.accept();
 			Player player2 = new Player(game, socket2, 'O');
+			
+			player1.other = player2;
+			player2.other = player1;
 			
 			player1.start();
 			player2.start();
@@ -30,8 +32,6 @@ public class ServerTest {
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
-		
-
 	}// end of main
 	
 	public static class Game {
@@ -57,26 +57,28 @@ public class ServerTest {
 	}//end of Game
 	
 	public static class Player extends Thread{
-		Game game;
-		Socket socket;
-		BufferedReader br;
-		PrintWriter pw;
+		public Game game;
+		public Socket socket;
+		public BufferedReader br;
+		public PrintWriter pw;
 		char playerMark;
-		Player other;
+		public Player other;
 		
-		public Player (Game game, Socket socket, char PlayerMark) {
+		public Player (Game game, Socket socket, char playerMark) {
 			
 			this.game = game;
 			this.socket = socket;
+			this.playerMark = playerMark;
+			
 			try {
-				this.br = new BufferedReader(new InputStreamReader(socket.getInputStream()));
-				this.pw = new PrintWriter(socket.getOutputStream(), true);
+				br = new BufferedReader(new InputStreamReader(socket.getInputStream()));
+				pw = new PrintWriter(socket.getOutputStream(), true);
 				pw.println("START " + playerMark);
 				pw.println("PRINT 다른 경기자를 기다리고 있습니다.");
+				
 			} catch (IOException e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
-			}
+				System.out.println("연결이 끊어졌습니다. " + e);
+}
 		}
 
 		@Override
@@ -87,22 +89,22 @@ public class ServerTest {
 			}
 			
 			try {
-			while(true) {
-				String command;
-					command = br.readLine();
-				if(command == null) continue;
+				while(true) {
+					String command = br.readLine();
+					if(command == null) continue;
 				
-				if(command.startsWith("MOVE")) {
-					int i  = Integer.parseInt(command.substring(5, 6));
-					int j  = Integer.parseInt(command.substring(7, 8));
-					game.setBoards(i, j, playerMark);
-					game.printBoard();
-					pw.println("PRINT 기다리세요");
-					other.pw.println("PRINT 당신 차례입니다.");
-				}else if (command.startsWith("QUIT")) {
-					break;
-				}
-			}//end of while
+					if(command.startsWith("MOVE")) {
+						int i  = Integer.parseInt(command.substring(5, 6));
+						int j  = Integer.parseInt(command.substring(7, 8));
+						game.setBoards(i, j, playerMark);
+						game.printBoard();
+						other.pw.println("OTHER " + i + " " + j); ////////////////
+						pw.println("PRINT 기다리세요");
+						other.pw.println("PRINT 당신 차례입니다.");
+					} else if (command.startsWith("QUIT")) {
+						break;
+					}
+				}//end of while
 			} catch (IOException e) {
 				e.printStackTrace();
 			} finally {
