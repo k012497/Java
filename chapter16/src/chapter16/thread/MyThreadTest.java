@@ -12,8 +12,8 @@ public class MyThreadTest {
 		//2. 소리를 내는 스레드
 		Thread t2 = new MyThread2();
 		
-		t1.start(); // run()이나 start()나 똑같음
-		t2.run(); //둘 다 run()으로하면 동시에 안 됨  why ?
+		t1.start();
+		t2.run(); 
 	}
 
 }

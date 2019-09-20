@@ -2,6 +2,7 @@ package chapter16.thread;
 
 import java.awt.Toolkit;
 /*
+ * Runnable 인터페이스 구현을 통한 스레드 생성
  * add yield()
  */
 public class MyThreadTest4 {
