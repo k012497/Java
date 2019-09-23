@@ -28,7 +28,7 @@ public class ServerTest {
 
 			while (true) {
 				Socket socket = ss.accept();
-				Translator t;
+				Translator t ;
 				t = new Translator(socket);
 				t.start();
 			} // end of while

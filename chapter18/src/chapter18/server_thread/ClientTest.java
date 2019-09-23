@@ -42,7 +42,7 @@ public class ClientTest extends JFrame implements ActionListener{
 			
 			//socket
 			try {
-				socket = new Socket("192.168.112.23", 2200);
+				socket = new Socket("192.168.1.102", 2200);
 				br = new BufferedReader (new InputStreamReader(socket.getInputStream()));
 				pw = new PrintWriter(socket.getOutputStream(), true);
 				
