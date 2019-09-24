@@ -26,6 +26,7 @@ public class MyThreadTest4 {
 			}
 		});
 		
+
 		t1.start();
 		t2.start();
 	}
