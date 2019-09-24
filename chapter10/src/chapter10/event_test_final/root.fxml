@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="200.0" prefWidth="300.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8" fx:controller="chapter10.event_test_final.RootController">
+   <children>
+      <Label fx:id="label" layoutX="133.0" layoutY="60.0" text="TEXT" />
+      <Button fx:id="button1" layoutX="40.0" layoutY="117.0" text="hihello" />
+      <Button fx:id="button2" layoutX="119.0" layoutY="117.0" text="byebye" />
+      <Button fx:id="button3" layoutX="198.0" layoutY="117.0" onAction="#handlerButton3Action" text="집에 가자!" />
+   </children>
+</AnchorPane>

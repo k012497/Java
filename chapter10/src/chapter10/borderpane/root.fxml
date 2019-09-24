@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.BorderPane?>
+
+<BorderPane prefHeight="200.0" prefWidth="300.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8">
+   <top>
+      <ToolBar prefHeight="40.0" prefWidth="200.0" style="-fx-background-color: black;" BorderPane.alignment="CENTER">
+        <items>
+          <Button mnemonicParsing="false" text="MENU 1" />
+            <Button mnemonicParsing="false" text="MENU 2" />
+        </items>
+      </ToolBar>
+   </top>
+   <center>
+      <TextArea prefHeight="119.0" prefWidth="300.0" style="-fx-background-color: black;" BorderPane.alignment="CENTER" />
+   </center>
+   <bottom>
+      <BorderPane prefHeight="33.0" prefWidth="300.0" style="-fx-background-color: black;" BorderPane.alignment="CENTER">
+         <center>
+            <TextField BorderPane.alignment="CENTER">
+               <BorderPane.margin>
+                  <Insets right="5.0" />
+               </BorderPane.margin>
+            </TextField>
+         </center>
+         <right>
+            <Button mnemonicParsing="false" text="send" BorderPane.alignment="CENTER" />
+         </right>
+         <BorderPane.margin>
+            <Insets />
+         </BorderPane.margin>
+         <padding>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+         </padding>
+      </BorderPane>
+   </bottom>
+</BorderPane>
