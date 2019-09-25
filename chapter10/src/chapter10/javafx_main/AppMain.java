@@ -1,4 +1,4 @@
-package chpater10.javafx_main;
+package chapter10.javafx_main;
 
 import java.util.List;
 import java.util.Map;

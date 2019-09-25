@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8" fx:controller="chapter10.textarea_text3.RootController">
+   <children>
+      <Label fx:id="lbl1" text="1" />
+      <TextArea fx:id="txt1" prefHeight="127.0" prefWidth="200.0" />
+      <Label fx:id="lbl2" text="2" />
+      <TextArea fx:id="txt2" prefHeight="126.0" prefWidth="200.0" />
+      <HBox alignment="CENTER" prefHeight="32.0" prefWidth="200.0" spacing="20.0">
+         <children>
+            <Button fx:id="btn1" mnemonicParsing="false" onAction="#handlerButtonAction" text="Button" />
+            <Button fx:id="btn2" mnemonicParsing="false" text="Button" />
+         </children>
+      </HBox>
+   </children>
+</VBox>
