@@ -15,13 +15,13 @@
             <Image url="@images/geek.gif" />
          </image>
       </ImageView>
-      <RadioButton fx:id="rdoArea" layoutX="225.0" layoutY="101.0" mnemonicParsing="false" text="AreaChart" userData="AreaChart">
+      <RadioButton fx:id="rdoArea" layoutX="225.0" layoutY="101.0" mnemonicParsing="false" text="AreaChart" userData="areaChart" onAction="#handlerRadioButtonAction">
          <toggleGroup>
             <ToggleGroup fx:id="group" />
          </toggleGroup>
       </RadioButton>
-      <RadioButton fx:id="rdoBar" layoutX="225.0" layoutY="67.0" mnemonicParsing="false" text="BarChart" toggleGroup="$group" userData="BarChart" />
-      <RadioButton fx:id="rdoBubble" layoutX="225.0" layoutY="34.0" mnemonicParsing="false" text="BubbleChart" toggleGroup="$group" userData="BubbleChart" />
+      <RadioButton fx:id="rdoBar" layoutX="225.0" layoutY="67.0" mnemonicParsing="false" text="BarChart" toggleGroup="$group" userData="barChart" onAction="#handlerRadioButtonAction"/>
+      <RadioButton fx:id="rdoBubble" layoutX="225.0" layoutY="34.0" mnemonicParsing="false" text="BubbleChart" toggleGroup="$group" userData="bubbleChart" onAction="#handlerRadioButtonAction"/>
       <ImageView fx:id="imgChart" fitHeight="102.0" fitWidth="100.0" layoutX="331.0" layoutY="25.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@images/areaChart.png" />

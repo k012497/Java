@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="180.0" prefWidth="500.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="chapter10.view_control_test.RootController">
+   <children>
+      <ListView fx:id="listView" layoutX="17.0" layoutY="38.0" prefHeight="100.0" prefWidth="100.0" />
+      <Label layoutX="18.0" layoutY="13.0" text="ListView" />
+      <Label layoutX="138.0" layoutY="13.0" text="TableView" />
+      <TableView fx:id="tableView" layoutX="138.0" layoutY="38.0" prefHeight="100.0" prefWidth="264.0">
+        <columns>
+          <TableColumn prefWidth="87.0" text="smartPhone" />
+          <TableColumn prefWidth="125.0" text="image" />
+        </columns>
+      </TableView>
+      <ImageView fx:id="imageView" fitHeight="100.0" fitWidth="60.0" layoutX="420.0" layoutY="40.0" pickOnBounds="true" preserveRatio="true" />
+      <Label layoutX="417.0" layoutY="13.0" text="ImageView" />
+      <Button fx:id="btnOK" layoutX="184.0" layoutY="146.0" mnemonicParsing="false" onAction="#handlerButtonOkAction" text="OK" />
+      <Button fx:id="btnExit" layoutX="255.0" layoutY="146.0" mnemonicParsing="false" onAction="#handlerButtonExitAction" text="Cancel" />
+   </children>
+</AnchorPane>
