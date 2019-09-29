@@ -21,10 +21,10 @@ import javafx.scene.image.ImageView;
 
 public class RootController implements Initializable {
 	//1. 변수선언 (리스트뷰, 테이블뷰, 이미지뷰)
-	@FXML private ListView<String> listView;
-	@FXML private TableView<Phone> tableView;
-	@FXML private ImageView imageView;
-
+	@FXML ListView<String> listView;
+	@FXML TableView<Phone> tableView;
+	@FXML ImageView imageView;
+	
 	@Override
 	public void initialize(URL arg0, ResourceBundle arg1) {
 	   //1. 리스트뷰를 항목을 삽입하고 프로퍼티 이벤트처리한다.
@@ -33,45 +33,45 @@ public class RootController implements Initializable {
 	   insertTableViewItemAndEventProcess();
 	   
 	} //end initialize
-	
 	private void insertTableViewItemAndEventProcess() {
-		ObservableList<Phone> tableViewData = FXCollections.observableArrayList();
-		tableViewData.add(new Phone("phone 01", "phone01.png"));
-		tableViewData.add(new Phone("phone 02", "phone02.png"));
-		tableViewData.add(new Phone("phone 03", "phone03.png"));
-		tableViewData.add(new Phone("phone 04", "phone04.png"));
-		tableViewData.add(new Phone("phone 05", "phone05.png"));
-		tableViewData.add(new Phone("phone 06", "phone06.png"));
-		tableViewData.add(new Phone("phone 07", "phone07.png"));
-		
-		TableColumn tcSmartPhone = tableView.getColumns().get(0);
-		tcSmartPhone.setCellValueFactory(new PropertyValueFactory("smartPhone"));
-		
-		TableColumn tcImage = tableView.getColumns().get(1);
-		tcImage.setCellValueFactory(new PropertyValueFactory("image"));
-		
-		tableView.setItems(tableViewData);
-		tableView.getSelectionModel().selectedItemProperty().addListener(new ChangeListener<Phone>() {
+	   ObservableList<Phone> tableViewData = FXCollections.observableArrayList();
+	   tableViewData.add(new Phone("phone01", "phone01.png"));
+	   tableViewData.add(new Phone("phone02", "phone02.png"));
+	   tableViewData.add(new Phone("phone03", "phone03.png"));
+	   tableViewData.add(new Phone("phone04", "phone04.png"));
+	   tableViewData.add(new Phone("phone05", "phone05.png"));
+	   tableViewData.add(new Phone("phone06", "phone06.png"));
+	   tableViewData.add(new Phone("phone07", "phone07.png"));
+	   
+	   TableColumn tcSmartPhone = tableView.getColumns().get(0);
+	   tcSmartPhone.setCellValueFactory(new PropertyValueFactory("smartPhone"));
+	   
+	   TableColumn tcImage = tableView.getColumns().get(1);
+	   tcImage.setCellValueFactory(new PropertyValueFactory("image"));
+	   
+	   tableView.setItems(tableViewData);
+	   
+	   tableView.getSelectionModel().selectedItemProperty().addListener(new ChangeListener<Phone>() {
 
-			@Override
-			public void changed(ObservableValue<? extends Phone> observable, Phone oldValue, Phone phone) {
-				Image img = new Image(getClass().getResource("images/" + phone.getImage()).toString());
-				imageView.setImage(img);
-			}
-		});
+		@Override
+		public void changed(ObservableValue<? extends Phone> observable, Phone oldValue, Phone phone) {
+			imageView.setImage(new Image(getClass().getResource("images/" + phone.getImage()).toString()));
+		}
+
+	   });
 	}
-	
 	private void insertListViewItemAndEventProcess() {
 		ObservableList<String> listViewData = FXCollections.observableArrayList();
-		listViewData.add("phone01");
-		listViewData.add("phone02");
-		listViewData.add("phone03");
-		listViewData.add("phone04");
-		listViewData.add("phone05");
-		listViewData.add("phone06");
-		listViewData.add("phone07");
+		listViewData.add("1");
+		listViewData.add("2");
+		listViewData.add("3");
+		listViewData.add("4");
+		listViewData.add("5");
+		listViewData.add("6");
+		listViewData.add("7");
 		
 		listView.setItems(listViewData);
+		
 		listView.getSelectionModel().selectedIndexProperty().addListener(new ChangeListener<Number>() {
 
 			@Override
@@ -81,12 +81,10 @@ public class RootController implements Initializable {
 			}
 		});
 	}
-	
 	public void handlerButtonOkAction(ActionEvent e) {
 		System.out.println(listView.getSelectionModel().getSelectedItem());
 		System.out.println(tableView.getSelectionModel().getSelectedItem());
 	}
-	
 	public void handlerButtonExitAction(ActionEvent e) {
 		Platform.exit();
 	}

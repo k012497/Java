@@ -6,19 +6,14 @@ public class Phone {
 	private SimpleStringProperty smartPhone;
 	private SimpleStringProperty image;
 	
-	@Override
-	public String toString() {
-		return "Phone [smartPhone=" + smartPhone.get() + ", image=" + image.get() + "]";
-	}
-
 	public Phone(String smartPhone, String image) {
 		super();
 		this.smartPhone = new SimpleStringProperty(smartPhone);
-		this.image = new SimpleStringProperty(image);
+		this.image = new SimpleStringProperty(smartPhone);
 	}
 
 	public String getSmartPhone() {
-		return smartPhone.get();
+		return this.smartPhone.get();
 	}
 
 	public void setSmartPhone(String smartPhone) {
@@ -26,10 +21,12 @@ public class Phone {
 	}
 
 	public String getImage() {
-		return image.get();
+		return this.image.get();
 	}
 
 	public void setImage(String image) {
 		this.image.set(image);
 	}
+	
+	
 }
