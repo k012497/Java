@@ -18,52 +18,31 @@ import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
+/*
+ * 연습용 
+ */
+public class RootController2 implements Initializable {
 
-public class RootController implements Initializable {
-	@FXML private ListView<String> listView;
-	@FXML private TableView<Phone> tableView;
-	@FXML private ImageView imageView;
+	//1. 변수선언 (리스트뷰, 테이블뷰, 이미지뷰)
+	@FXML ListView<String> listView;
+	@FXML TableView<Phone> tableView;
+	@FXML ImageView imageView;
 	
 	@Override
 	public void initialize(URL location, ResourceBundle resources) {
-		insertTableViewItemAndEventProcess();
-		insertListViewItemAndEventProcess();
-	}
-
-	private void insertTableViewItemAndEventProcess() {
-		ObservableList<Phone> tableViewData = FXCollections.observableArrayList();
-		tableViewData.add(new Phone("phone01", "phone01.png"));
-		tableViewData.add(new Phone("phone02", "phone02.png"));
-		tableViewData.add(new Phone("phone03", "phone03.png"));
-		tableViewData.add(new Phone("phone04", "phone04.png"));
-		tableViewData.add(new Phone("phone05", "phone05.png"));
-		tableViewData.add(new Phone("phone06", "phone06.png"));
-		tableViewData.add(new Phone("phone07", "phone07.png"));
-		
-		TableColumn tcSmartPhone = tableView.getColumns().get(0);
-		tcSmartPhone.setCellValueFactory(new PropertyValueFactory("smartPhone"));
-		TableColumn tcImage = tableView.getColumns().get(1);
-		tcImage.setCellValueFactory(new PropertyValueFactory("image"));
-		
-		tableView.setItems(tableViewData);
-		
-		tableView.getSelectionModel().selectedItemProperty().addListener(new ChangeListener<Phone>() {
-
-			@Override
-			public void changed(ObservableValue<? extends Phone> observable, Phone oldValue, Phone phone) {
-				imageView.setImage(new Image(getClass().getResource("images/" + phone.getImage()).toString()));
-			}
-		});
+		insertListItemandEventProcess();
+		insertTableItemandEventProcess();
 		
 	}
 
-	private void insertListViewItemAndEventProcess() {
+	private void insertListItemandEventProcess() {
 		ObservableList<String> listViewData = FXCollections.observableArrayList();
 		listViewData.add("phone01");
 		listViewData.add("phone02");
 		listViewData.add("phone03");
 		listViewData.add("phone04");
 		listViewData.add("phone05");
+		listViewData.add("phone06");
 		listViewData.add("phone06");
 		listViewData.add("phone07");
 		
@@ -76,16 +55,41 @@ public class RootController implements Initializable {
 				tableView.getSelectionModel().select(newValue.intValue());
 				tableView.scrollTo(newValue.intValue());
 			}
+
 		});
-		
 	}
+
+	private void insertTableItemandEventProcess() {
+		ObservableList<Phone> tableViewData = FXCollections.observableArrayList();
+		tableViewData.add(new Phone("phone01", "phone01.png"));
+		tableViewData.add(new Phone("phone02", "phone02.png"));
+		tableViewData.add(new Phone("phone03", "phone03.png"));
+		tableViewData.add(new Phone("phone04", "phone04.png"));
+		tableViewData.add(new Phone("phone05", "phone05.png"));
+		tableViewData.add(new Phone("phone06", "phone06.png"));
+		tableViewData.add(new Phone("phone07", "phone07.png"));
+		
+		TableColumn tcSmartPhone = tableView.getColumns().get(0);
+		tcSmartPhone.setCellValueFactory(new PropertyValueFactory("smartPhone"));
+		
+		TableColumn tcImage = tableView.getColumns().get(0);
+		tcImage.setCellValueFactory(new PropertyValueFactory("Image"));
+				
+		tableView.setItems(tableViewData);
+		
+		tableView.getSelectionModel().selectedItemProperty().addListener(new ChangeListener<Phone>() {
+
+			@Override
+			public void changed(ObservableValue<? extends Phone> observable, Phone oldValue, Phone phone) {
+				imageView.setImage(new Image(getClass().getResource("images/" + phone.getImage()).toString()));
+			}
+		});
+	}
+
 	
 	public void handlerButtonOkAction() {
 		System.out.println(listView.getSelectionModel().getSelectedItem());
 		System.out.println(tableView.getSelectionModel().getSelectedItem());
-	}
-	public void handlerButtonExitAction() {
-		Platform.exit();
 	}
 	
 }

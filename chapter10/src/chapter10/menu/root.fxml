@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.input.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+
+<AnchorPane prefHeight="200.0" prefWidth="400.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8" fx:controller="chapter10.menu.RootController">
+   <children>
+      <MenuBar prefHeight="29.0" prefWidth="400.0">
+        <menus>
+          <Menu mnemonicParsing="false" text="File">
+            <items>
+              <MenuItem mnemonicParsing="false" onAction="#handlerMenuItemNewAction" text="New">
+                     <accelerator>
+                        <KeyCodeCombination alt="DOWN" code="N" control="ANY" meta="ANY" shift="DOWN" shortcut="ANY" />
+                     </accelerator>
+                     <graphic>
+                        <ImageView fitHeight="15.0" fitWidth="15.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@icons/new.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </MenuItem>
+                  <MenuItem mnemonicParsing="false" onAction="#handlerMenuItemOpenAction" text="Open">
+                     <accelerator>
+                        <KeyCodeCombination alt="ANY" code="O" control="DOWN" meta="ANY" shift="ANY" shortcut="ANY" />
+                     </accelerator>
+                     <graphic>
+                        <ImageView fitHeight="15.0" fitWidth="15.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@icons/open.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </MenuItem>
+                  <MenuItem mnemonicParsing="false" onAction="#handlerMenuItemSaveAction" text="Save">
+                     <accelerator>
+                        <KeyCodeCombination alt="ANY" code="S" control="DOWN" meta="ANY" shift="ANY" shortcut="ANY" />
+                     </accelerator>
+                     <graphic>
+                        <ImageView fitHeight="15.0" fitWidth="15.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@icons/save.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </MenuItem>
+                  <SeparatorMenuItem mnemonicParsing="false" />
+                  <MenuItem mnemonicParsing="false" onAction="#handlerMenuItemExitAction" text="Exit">
+                     <accelerator>
+                        <KeyCodeCombination alt="ANY" code="X" control="DOWN" meta="ANY" shift="ANY" shortcut="ANY" />
+                     </accelerator>
+                  </MenuItem>
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Edit">
+            <items>
+              <MenuItem mnemonicParsing="false" text="Delete" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Help">
+            <items>
+              <MenuItem mnemonicParsing="false" text="About" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+      <ToolBar layoutY="29.0" prefHeight="29.0" prefWidth="400.0">
+        <items>
+          <Button mnemonicParsing="false" onAction="#handlerMenuItemNewAction">
+               <graphic>
+                  <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@icons/new.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button mnemonicParsing="false" onAction="#handlerMenuItemOpenAction">
+               <graphic>
+                  <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@icons/open.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button mnemonicParsing="false" onAction="#handlerMenuItemSaveAction">
+               <graphic>
+                  <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@icons/save.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+        </items>
+      </ToolBar>
+      <TextArea fx:id="textArea" layoutY="68.0" prefHeight="200.0" prefWidth="400.0" />
+   </children>
+</AnchorPane>
