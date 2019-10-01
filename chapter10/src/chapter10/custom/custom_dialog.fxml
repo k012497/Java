@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+
+<AnchorPane prefHeight="200.0" prefWidth="400.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8" fx:controller="chapter10.custom.Rootcontroller">
+   <children>
+      <Label layoutX="67.0" layoutY="105.0" text="MAT" />
+      <Label layoutX="67.0" layoutY="68.0" text="ENG" />
+      <Label layoutX="67.0" layoutY="32.0" text="KOR" />
+      <Label layoutX="34.0" layoutY="156.0" text="sum" />
+      <Label layoutX="226.0" layoutY="156.0" text="avg" />
+      <TextField id="textFieldAvg" layoutX="270.0" layoutY="151.0" prefHeight="27.0" prefWidth="105.0" />
+      <TextField id="textFieldSum" layoutX="84.0" layoutY="151.0" prefHeight="27.0" prefWidth="113.0" />
+      <TextField id="textFieldMat" layoutX="119.0" layoutY="100.0" prefHeight="27.0" prefWidth="84.0" />
+      <TextField id="textFieldEng" layoutX="118.0" layoutY="63.0" prefHeight="27.0" prefWidth="84.0" />
+      <TextField id="textFieldKor" layoutX="117.0" layoutY="27.0" prefHeight="27.0" prefWidth="84.0" />
+      <Button id="btnSum" layoutX="259.0" layoutY="50.0" mnemonicParsing="false" text="SUM" />
+      <Button id="btnAvg" layoutX="323.0" layoutY="50.0" mnemonicParsing="false" text="AVG" />
+      <Button id="btnClear" layoutX="277.0" layoutY="87.0" mnemonicParsing="false" text="Clear ALL" />
+   </children>
+</AnchorPane>
