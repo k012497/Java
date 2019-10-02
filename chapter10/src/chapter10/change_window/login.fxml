@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+
+<AnchorPane fx:id="achRoot" prefHeight="350.0" prefWidth="500.0" style="-fx-background-color: black;" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8" fx:controller="chapter10.change_window.LoginController">
+   <children>
+      <Label layoutX="180.0" layoutY="29.0" style="-fx-font-size: 30;" text="* Sign in *" textFill="#e4c86b" />
+      <Button fx:id="btnMain" layoutX="345.0" layoutY="66.0" mnemonicParsing="false" text="MAIN" />
+      <ImageView fitHeight="203.0" fitWidth="378.0" layoutX="149.0" layoutY="112.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@images/43817427_165435974390867_3341275222775100261_n.jpg" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

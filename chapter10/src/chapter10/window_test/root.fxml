@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.StackPane?>
+
+<StackPane prefHeight="500.0" prefWidth="500.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="chapter10.window_test.RootController">
+   <children>
+      <AnchorPane prefHeight="500.0" prefWidth="500.0">
+         <children>
+            <Label layoutX="204.0" layoutY="60.0" text="MAIN">
+               <font>
+                  <Font size="36.0" />
+               </font>
+            </Label>
+            <Button fx:id="btn1" layoutX="145.0" layoutY="128.0" mnemonicParsing="false" onAction="#handleButtonWindow1Action" text="WINDOW 1" />
+            <Button fx:id="btn2" layoutX="272.0" layoutY="128.0" mnemonicParsing="false" onAction="#handleButtonWindow2Action" text="WINDOW 2" />
+            <ImageView fitHeight="293.0" fitWidth="256.0" layoutX="122.0" layoutY="186.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@images/43817427_165435974390867_3341275222775100261_n.jpg" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+   </children>
+</StackPane>

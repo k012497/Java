@@ -1,0 +1,23 @@
+TextField {
+	-fx-border-color : black;
+	-fx-background-color: white;
+}
+
+TextField:focused {
+	-fx-border-width: 2;
+	-fx-border-style: solid dotted dashed segments(3,2,8,2);
+	-fx-background-color: #E5E7E9;
+}
+
+Button:hover {
+	-fx-background-color: #D4EFDF;
+}
+
+Button:pressed {
+	-fx-background-color: #E59866;
+}
+
+Button {
+	-fx-border-color : black;
+	-fx-background-color: white;
+}

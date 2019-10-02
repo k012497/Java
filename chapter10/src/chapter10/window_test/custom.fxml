@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane fx:id="anc1" prefHeight="500.0" prefWidth="500.0" style="-fx-background-color: beige;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="chapter10.window_test.CustomController">
+   <children>
+      <Label layoutX="269.0" layoutY="290.0" text="AVG" />
+      <Button fx:id="btnMain" layoutX="342.0" layoutY="81.0" mnemonicParsing="false" style="-fx-border-color: gray; -fx-background-color: gray;" text="MAIN" textFill="WHITE" />
+      <Label layoutX="138.0" layoutY="290.0" text="SUM" />
+      <Label layoutX="126.0" layoutY="236.0" text="MATH" />
+      <Label layoutX="136.0" layoutY="201.0" text="ENG" />
+      <Label layoutX="135.0" layoutY="164.0" text="KOR" />
+      <Label layoutX="162.0" layoutY="77.0" text="WINDOW 1">
+         <font>
+            <Font name="Arial Black" size="24.0" />
+         </font>
+      </Label>
+      <Button fx:id="btnClear" layoutX="294.0" layoutY="229.0" mnemonicParsing="false" style="-fx-background-color: white; -fx-border-color: black;" text="CLEAR" />
+      <Button fx:id="btnAvg" layoutX="294.0" layoutY="195.0" mnemonicParsing="false" style="-fx-border-color: black; -fx-background-color: white;" text="AVG" />
+      <Button fx:id="btnSum" layoutX="294.0" layoutY="162.0" mnemonicParsing="false" style="-fx-border-color: black; -fx-background-color: white;" text="SUM" />
+      <TextField fx:id="textFieldKor" layoutX="177.0" layoutY="159.0" prefHeight="27.0" prefWidth="52.0" style="-fx-border-color: black;" />
+      <TextField fx:id="textFieldEng" layoutX="177.0" layoutY="196.0" prefHeight="27.0" prefWidth="52.0" style="-fx-border-color: black;" />
+      <TextField fx:id="textFieldMat" layoutX="177.0" layoutY="232.0" prefHeight="27.0" prefWidth="52.0" style="-fx-border-color: black;" />
+      <TextField fx:id="textFieldAvg" layoutX="305.0" layoutY="285.0" prefHeight="27.0" prefWidth="52.0" style="-fx-border-color: brown;" />
+      <TextField fx:id="textFieldSum" layoutX="177.0" layoutY="285.0" prefHeight="27.0" prefWidth="52.0" style="-fx-border-color: brown;" />
+   </children>
+</AnchorPane>
